@@ -72,5 +72,5 @@ pip install --upgrade flet
 3. Generate the APK
 
 ```bash
-flet publish --platform android --target apk app.py
+flet build apk --module-name app
 ```
