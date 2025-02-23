@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  flet-notes:
+    # Docker image build context is the current directory (.)
+    build: .
+    container_name: flet-notes-app
+    image: flet-notes-app
+
+    # Restart policy
+    restart: always
+
+    # Load environment variables from .env file
+    env_file:
+      - .env
+
+    # Map container port 8015 to host port 8015
+    ports:
+      - "8015:8015"
